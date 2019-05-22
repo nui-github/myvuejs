@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <section class="section">
+      <div class="container">
+        <!-- <counter/>
+        <userlist/> -->
+        <appbar/>
+        <router-view/>
+        
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter'
+import Userlist from './components/Userlist'
+import Appbar from './components/appbar'
 
-export default {
-  name: 'app',
+export default{
   components: {
-    HelloWorld
+    counter: Counter,
+    userlist: Userlist,
+    appbar: Appbar
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
+
